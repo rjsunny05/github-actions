@@ -23,7 +23,7 @@ jobs:
 
       - name: Rsync files to server
         run: |
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
+           rsync -avz --delete -e "ssh -i ~/.ssh/id_rsa" ./ ubuntu@3.83.67.178:/var/www/html/
 
 
      
